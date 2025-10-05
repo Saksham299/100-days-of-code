@@ -9,4 +9,4 @@ Welcome to my 100 Days of Code journey in C! 🚀
 
 ## Log
 
-- **Day 1:** Wrote my first "Hello World" program in C.
+- **Day 1:** Wrote my first "sum of two number"code.
