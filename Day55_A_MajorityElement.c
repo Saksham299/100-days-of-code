@@ -1,0 +1,28 @@
+// Q105 (Logic Enhancers)
+// Write a program to take an integer array nums of size n, and print the majority element.
+// The majority element appears strictly more than n/2 times. Print -1 if no such element exists.
+
+#include <stdio.h>
+
+int main() {
+    int n;
+    printf("Enter size of array: ");
+    scanf("%d", &n);
+    int nums[n];
+    printf("Enter %d elements: ", n);
+    for(int i = 0; i < n; i++) scanf("%d", &nums[i]);
+
+    int count, found = -1;
+    for(int i = 0; i < n; i++) {
+        count = 0;
+        for(int j = 0; j < n; j++) {
+            if(nums[i] == nums[j]) count++;
+        }
+        if(count > n/2) {
+            found = nums[i];
+            break;
+        }
+    }
+    printf("%d\n", found);
+    return 0;
+}

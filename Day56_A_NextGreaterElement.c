@@ -1,0 +1,28 @@
+// Q106 (Logic Enhancers)
+// Write a program to take an array arr[] of integers as input,
+// find the next greater element for each element using brute force (nested loop).
+
+#include <stdio.h>
+
+int main() {
+    int n;
+    printf("Enter size of array: ");
+    scanf("%d", &n);
+    int arr[n];
+    printf("Enter %d elements: ", n);
+    for(int i = 0; i < n; i++) scanf("%d", &arr[i]);
+
+    for(int i = 0; i < n; i++) {
+        int next = -1;
+        for(int j = i + 1; j < n; j++) {
+            if(arr[j] > arr[i]) {
+                next = arr[j];
+                break;
+            }
+        }
+        printf("%d", next);
+        if(i < n - 1) printf(", ");
+    }
+    printf("\n");
+    return 0;
+}
